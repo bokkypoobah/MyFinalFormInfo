@@ -26,6 +26,11 @@ const ADDLAYERTXHASHES = [
   "0x6188df9a320faebd87d63f496cfc43edee8bdeb0fc31b2a31840603ab75fcbeb",
   "0x86616e9064709e5545fd58880eb89a0998ebde330a5f399879b8b1defb47159c",
 ];
+// Checked both these addLayer(2, ...) and the input data is the same
+// const ADDLAYERTXHASHES = [
+//   "0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3",
+//   "0xb7065b6d4f9abc8b37bb04775df2bcd9d7a5801572a9046dd52dcc67240c0eca",
+// ];
 
 let STARTBLOCKNUMBER=13045935;
 let ENDBLOCKNUMBER=13047090;
