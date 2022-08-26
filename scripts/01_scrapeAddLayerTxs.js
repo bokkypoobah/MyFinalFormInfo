@@ -8,7 +8,7 @@ const MFFABI=[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},
 
 
 // Contract deployment 0xed0555bf0420aab38d62065f1cafdbce032528189a7483b2b8a95201f92734b3
-const ADDLAYERTXHASHES = [
+let ADDLAYERTXHASHES = [
   "0x3f1e9e37464f14fe72a23b580ab5ddf86f7cd9ea572f2c2cfc80fd458773bebc",
   "0xc3bac8f516fd34ff25867373fb2965e8be73ac956923564af56d12c887d8bc87",
   "0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3",
@@ -27,7 +27,7 @@ const ADDLAYERTXHASHES = [
   "0x86616e9064709e5545fd58880eb89a0998ebde330a5f399879b8b1defb47159c",
 ];
 // Checked both these addLayer(2, ...) and the input data is the same
-// const ADDLAYERTXHASHES = [
+// ADDLAYERTXHASHES = [
 //   "0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3",
 //   // "0xb7065b6d4f9abc8b37bb04775df2bcd9d7a5801572a9046dd52dcc67240c0eca",
 // ];
@@ -62,11 +62,36 @@ async function doIt() {
     // }
   }
 
+  function hex2a(hexx) {
+      var hex = hexx.toString();//force conversion
+      var str = '';
+      for (var i = 0; i < hex.length; i += 2)
+          str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+      return str;
+  }
+
+  // const test = "0x89504e470d0a1a0a0000000d494844520000003a0000003a0103000000db75d86b000000017352474201d9c92c7f000000097048597300000b1300000b1301009a9c1800000006504c5445000000000000a567b9cf0000000274524e53001a8bf134420000003b49444154789c6360a00bf0a448b707946642083192630e1361255880038cc1e2822187c5190e984230200271450343034c8403423560514c6f000073d202fe6a6cbab50000000049454e44ae426082";
+  // const testOutput = ethers.utils.toUtf8Bytes(test);
+  // console.log(test + " " + testOutput);
+
   console.log("txHash\tlayer\ttuple#\tname\tmimeType\tdata");
   for (const item of data) {
     let tupleIndex = 0;
     for (const tuple of item.decodedData.args[1]) {
       console.log(item.tx.hash + "\t" + item.decodedData.args[0] + "\t" + tupleIndex + "\t" + tuple[0] + "\t" + tuple[1] + "\t" + tuple[2]);
+
+      // const filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0')+ "-" + tuple[0].toLowerCase().replace(/ /g, '_') + "." + tuple[1].replace(/^.*\//, '');
+      // const data1 = ethers.utils.toUtf8Bytes(tuple[2]);
+      // // const data1 = hex2a(tuple[2].substring(2));
+      // // const data1 = ethers.utils.arrayify(tuple[2]);
+      // // const data1 = ethers.utils.toUtf8String(ethers.utils.arrayify(tuple[2]));
+      // const data1 = ethers.utils.toUtf8String(tuple[2]);
+      // console.log(filename + " " + JSON.stringify(data1));
+      // fs.writeFile(filename, data1, (err) => {
+      //   if (err) return console.error(err);
+      //   // console.log("File successfully written !");
+      // });
+
       tupleIndex++;
     }
   }
