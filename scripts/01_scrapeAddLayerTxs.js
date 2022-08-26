@@ -29,7 +29,7 @@ const ADDLAYERTXHASHES = [
 // Checked both these addLayer(2, ...) and the input data is the same
 // const ADDLAYERTXHASHES = [
 //   "0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3",
-//   "0xb7065b6d4f9abc8b37bb04775df2bcd9d7a5801572a9046dd52dcc67240c0eca",
+//   // "0xb7065b6d4f9abc8b37bb04775df2bcd9d7a5801572a9046dd52dcc67240c0eca",
 // ];
 
 let STARTBLOCKNUMBER=13045935;
@@ -40,20 +40,34 @@ async function doIt() {
   const signer = provider.getSigner()
   const blockNumber = await provider.getBlockNumber();
   const mff = new ethers.Contract(MFFADDRESS, MFFABI, provider);
-  // console.log("blockNumber: " + blockNumber.toString());
 
+  const data = [];
   for (const txHash of ADDLAYERTXHASHES) {
     const tx = await provider.getTransaction(txHash);
     const txReceipt = await provider.getTransactionReceipt(txHash);
     const block = await provider.getBlock(txReceipt.blockNumber);
     let decodedData = mff.interface.parseTransaction({ data: tx.data, value: tx.value });
+    data.push({ tx, txReceipt, decodedData });
     // console.log("decodedData: " + JSON.stringify(decodedData, null, 2));
-    console.log(txHash + "\t" + decodedData.args[0] + "\t" + decodedData.args[1]);
+    // console.log(txHash + "\t" + decodedData.args[0] + "\t" + JSON.stringify(decodedData.args[1], null, 2));
+
+    // for (const tuple of decodedData.args[1]) {
+    //   console.log(txHash + "\t" + decodedData.args[0] + "\t" + JSON.stringify(tuple, null, 2));
+    // }
+
     // console.log("decodedData.functionFragment.name: " + decodedData.functionFragment.name);
     // for (let i in decodedData.functionFragment.inputs) {
     //   const c = decodedData.functionFragment.inputs[i];
     //   console.log("  " + i + " " + c.name + " " + c.type + " " + decodedData.args[i]);
     // }
+  }
+
+  for (const item of data) {
+    let tupleIndex = 0;
+    for (const tuple of item.decodedData.args[1]) {
+      console.log(item.tx.hash + "\t" + item.decodedData.args[0] + "\t" + tupleIndex + "\t" + tuple[0] + "\t" + tuple[1] + "\t" + tuple[2]);
+      tupleIndex++;
+    }
   }
 }
 
