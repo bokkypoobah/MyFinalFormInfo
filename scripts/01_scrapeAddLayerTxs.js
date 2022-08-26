@@ -62,6 +62,7 @@ async function doIt() {
     // }
   }
 
+  console.log("txHash\tlayer\ttuple#\tname\tmimeType\tdata");
   for (const item of data) {
     let tupleIndex = 0;
     for (const tuple of item.decodedData.args[1]) {
