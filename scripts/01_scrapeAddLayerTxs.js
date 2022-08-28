@@ -59,13 +59,14 @@ async function doIt() {
       let buffer = Buffer.from(tuple[2].substring(2), "hex");
       let filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0') + "-" + name + '.' + tuple[1].replace(/^.*\//, '');
       console.log('\n#### Layer ' + item.decodedData.args[0] + ' Trait ' + tupleIndex.toString().padStart(3, '0') + ' ' + tuple[0]);
-      console.log('<kbd><img src="scripts/' + filename + '" width="150px" height="150px" style="image-rendering: pixelated !important;" /></kbd>'); //  + ' ' + buffer);
       fs.writeFile(filename, buffer, (err) => {
         if (err) return console.error(err);
         // console.log("File successfully written !");
       });
 
       filename = "svgs/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0')+ "-" + name + ".svg"; // + tuple[1].replace(/^.*\//, '');
+      // console.log('<kbd><img src="scripts/' + filename + '" width="150px" height="150px" style="image-rendering: pixelated !important;" /></kbd>'); //  + ' ' + buffer);
+      console.log('<kbd><img src="scripts/' + filename + '" width="300px" height="300px" /></kbd>'); //  + ' ' + buffer);
       const base64 = buffer.toString('base64');
       const content = '<svg width="1200" height="1200" viewBox="0 0 1200 1200" version="1.2" xmlns="http://www.w3.org/2000/svg" style="background-color:transparent;background-image:url(data:' + tuple[1] + ';base64,' +
         base64 + ');background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;"></svg>';
