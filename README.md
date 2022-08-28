@@ -23,6 +23,17 @@ PNG and GIF images extracted from the transaction data can be found in [scripts/
 
 <kbd><img src="images/myfinalform_862_9554834177c04b289bea56e4a19e795a.svg" width="600px" height="600px" /></kbd>
 
+#### Layer 0 1 of 1s Trait 011 Generative
+<kbd><img src="scripts/svgs/layer0-trait011-generative.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 1 Hands Trait 014 Skateboard
+<kbd><img src="scripts/svgs/layer1-trait014-skateboard.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 2 Accessory Trait 015 Stoney Chocolate Munchies
+<kbd><img src="scripts/svgs/layer2-trait015-stoneychocolatemunchies.svg" width="300px" height="300px" /></kbd>
+
+
+
 ```
 tokenIdToHash(862) = 011014015071034157073026101047049000003025026
 ```
