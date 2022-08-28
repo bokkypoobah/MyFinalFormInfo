@@ -14,9 +14,29 @@ node 01_scrapeAddLayerTxs.js > addLayerTxs.txt
 
 PNG and GIF images extracted from the transaction data can be found in [scripts/images](scripts/images). The same images are available as SVGs in [script/svgs/](scripts/svgs).
 
+
 <br />
 
 <hr />
+
+### Example TokenId 862
+
+<kbd><img src="images/myfinalform_862_9554834177c04b289bea56e4a19e795a.svg" width="600px" height="600px" /></kbd>
+
+```
+tokenIdToHash(862) = 011014015071034157073026101047049000003025026
+```
+
+```
+hashToMetadata('011014015071034157073026101047049000003025026') = [{"trait_type":"1 of 1s","value":"Generative"},{"trait_type":"Hands","value":"Skateboard"},{"trait_type":"Accessory","value":"Stoney Chocolate Munchies"},{"trait_type":"SP Eyes","value":"Laser Eyez"},{"trait_type":"SP Mouth","value":"Peach Smile"},{"trait_type":"SP Head","value":"Black Hat"},{"trait_type":"LL Eyes","value":"Dope Shades"},{"trait_type":"LL Mouth","value":"Normal Beard"},{"trait_type":"LL Head","value":"Cowbutt"},{"trait_type":"Toadz Mouth","value":"Short Smoke"},{"trait_type":"Toadz Eyes","value":"Sun Burst"},{"trait_type":"Dick","value":"Spidey"},{"trait_type":"Butt","value":"None"},{"trait_type":"Skin","value":"Larva Sun Cream"},{"trait_type":"Background","value":"Bruise"}]
+```
+
+
+<br />
+
+<hr />
+
+### All Images By Layers And Traits
 
 #### Layer 0 Trait 000 'A Very Famous Simpson' - §SecretAveryF1
 <kbd><img src="scripts/svgs/layer0-trait000-averyfamoussimpson-secretaveryf1.svg" width="300px" height="300px" /></kbd>
