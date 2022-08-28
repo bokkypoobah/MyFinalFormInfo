@@ -5,4 +5,4 @@ scripts/node_modules
 scripts/package-lock.json
 private
 
-scripts/images
+# scripts/images
