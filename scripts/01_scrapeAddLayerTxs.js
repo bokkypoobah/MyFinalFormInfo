@@ -85,7 +85,7 @@ async function doIt() {
       let filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0') + "-" + name + '.' + tuple[1].replace(/^.*\//, '');
       // console.log(name + " => " + filename); //  + ' ' + buffer);
       console.log('\n#### Layer ' + item.decodedData.args[0] + ' Trait ' + tupleIndex.toString().padStart(3, '0') + ' ' + tuple[0]);
-      console.log('<kbd><img src="scripts/' + filename + '" width="150px" height="150px" style="image-rendering: pixelated;" /></kbd>'); //  + ' ' + buffer);
+      console.log('<kbd><img src="scripts/' + filename + '" width="150px" height="150px" style="image-rendering: pixelated !important;" /></kbd>'); //  + ' ' + buffer);
       fs.writeFile(filename, buffer, (err) => {
         if (err) return console.error(err);
       //   // console.log("File successfully written !");
