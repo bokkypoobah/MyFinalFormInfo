@@ -12,4 +12,4 @@ In scripts
 node 01_scrapeAddLayerTxs.js > addLayerTxs.txt
 ```
 
-Images extracted from the transaction data can be found in [scripts/images](scripts/images).
+PNG and GIF images extracted from the transaction data can be found in [scripts/images](scripts/images). The same images are available as SVGs in [script/svgs/](scripts/svgs).

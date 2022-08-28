@@ -81,19 +81,19 @@ async function doIt() {
       // console.log(item.tx.hash + "\t" + item.decodedData.args[0] + "\t" + tupleIndex + "\t" + tuple[0] + "\t" + tuple[1] + "\t" + tuple[2]);
 
       const name = tuple[0].toLowerCase().replace(/['\/ @]/g, '');
-      // console.log(name);
-      const filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0')+ "-" + name + ".svg"; // + tuple[1].replace(/^.*\//, '');
-      // const data1 = ethers.utils.toUtf8Bytes(tuple[2]);
-      // // const data1 = hex2a(tuple[2].substring(2));
-      // // const data1 = ethers.utils.arrayify(tuple[2]);
-      // // const data1 = ethers.utils.toUtf8String(ethers.utils.arrayify(tuple[2]));
-      const buffer = Buffer.from(tuple[2].substring(2), "hex");
-      console.log(name + " => " + filename);
-      // console.log(filename + " " + JSON.stringify(b.toString()));
+      let buffer = Buffer.from(tuple[2].substring(2), "hex");
+      let filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0')+ "-" + name + '.' + tuple[1].replace(/^.*\//, '');
+      console.log(name + " => " + filename); //  + ' ' + buffer);
+      fs.writeFile(filename, buffer, (err) => {
+        if (err) return console.error(err);
+      //   // console.log("File successfully written !");
+      });
+
+      filename = "svgs/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0')+ "-" + name + ".svg"; // + tuple[1].replace(/^.*\//, '');
       const base64 = buffer.toString('base64');
       const content = '<svg width="1200" height="1200" viewBox="0 0 1200 1200" version="1.2" xmlns="http://www.w3.org/2000/svg" style="background-color:transparent;background-image:url(data:' + tuple[1] + ';base64,' +
         base64 + ');background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;"></svg>';
-      // console.log(filename + " " + JSON.stringify(data1));
+        // console.log(filename + " " + JSON.stringify(data1));
       fs.writeFile(filename, content, (err) => {
         if (err) return console.error(err);
       //   // console.log("File successfully written !");
