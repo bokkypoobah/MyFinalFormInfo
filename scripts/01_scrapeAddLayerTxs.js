@@ -9,22 +9,22 @@ const MFFABI=[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},
 
 // Contract deployment 0xed0555bf0420aab38d62065f1cafdbce032528189a7483b2b8a95201f92734b3
 let ADDLAYERTXHASHES = [
-  "0x3f1e9e37464f14fe72a23b580ab5ddf86f7cd9ea572f2c2cfc80fd458773bebc",
-  "0xc3bac8f516fd34ff25867373fb2965e8be73ac956923564af56d12c887d8bc87",
-  "0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3",
-  "0xe47f8bb237f15adb5c68aafa3ac41059ed48d2f4038f7043c550be825d8f9286",
-  "0x7de9ef2d90b85196f2083021b932c26b6a715ffdf6c04d254a1c093ea848ccef",
-  "0xb7065b6d4f9abc8b37bb04775df2bcd9d7a5801572a9046dd52dcc67240c0eca",
-  "0x1ee722e68cba678a6b7ef1404e2974a93e21ac92aba016e965f566a8e0ea3354",
-  "0x300bf52b4d38565bb099b593913fc063dbc6029ece80b6d18cfbadb8e3296e65",
-  "0x12a74348a39bee838c16b2c78015ebe7a89fa64fa088f569d39c29fb273ff1eb",
-  "0xe1a0c8ff89791990815b33976dcc53b3f5e1c0f27f37a2b80699f626bb3282a9",
-  "0xcf912acd2c22f581ab8ce69487e38ab1c4a3a87556161ae70e81a293f0017cb3",
-  "0xaaea83cf9a26aeabcc12b62647e850cbf2fbcb5552ae666d3ca141085c590dbe",
-  "0xacfc7d53c25ce6c918933e209ac1ada306d01d40082c4710dc2ee29e332d4e21",
-  "0x5dc732ec369616f1adb6941415d87f518425149e8ffbd2cd2dcaab664fa1470b",
-  "0x6188df9a320faebd87d63f496cfc43edee8bdeb0fc31b2a31840603ab75fcbeb",
-  "0x86616e9064709e5545fd58880eb89a0998ebde330a5f399879b8b1defb47159c",
+  "0x3f1e9e37464f14fe72a23b580ab5ddf86f7cd9ea572f2c2cfc80fd458773bebc", // #0
+  "0xc3bac8f516fd34ff25867373fb2965e8be73ac956923564af56d12c887d8bc87", // #1
+  "0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3", // #2
+  // "0xb7065b6d4f9abc8b37bb04775df2bcd9d7a5801572a9046dd52dcc67240c0eca", // Duplicate #2
+  "0x5dc732ec369616f1adb6941415d87f518425149e8ffbd2cd2dcaab664fa1470b", // #3
+  "0xcf912acd2c22f581ab8ce69487e38ab1c4a3a87556161ae70e81a293f0017cb3", // #4
+  "0x12a74348a39bee838c16b2c78015ebe7a89fa64fa088f569d39c29fb273ff1eb", // #5
+  "0x6188df9a320faebd87d63f496cfc43edee8bdeb0fc31b2a31840603ab75fcbeb", // #6
+  "0xaaea83cf9a26aeabcc12b62647e850cbf2fbcb5552ae666d3ca141085c590dbe", // #7
+  "0xe1a0c8ff89791990815b33976dcc53b3f5e1c0f27f37a2b80699f626bb3282a9", // #8
+  "0x86616e9064709e5545fd58880eb89a0998ebde330a5f399879b8b1defb47159c", // #9
+  "0xacfc7d53c25ce6c918933e209ac1ada306d01d40082c4710dc2ee29e332d4e21", // #10
+  "0x7de9ef2d90b85196f2083021b932c26b6a715ffdf6c04d254a1c093ea848ccef", // #11
+  "0xe47f8bb237f15adb5c68aafa3ac41059ed48d2f4038f7043c550be825d8f9286", // #12
+  "0x300bf52b4d38565bb099b593913fc063dbc6029ece80b6d18cfbadb8e3296e65", // #13
+  "0x1ee722e68cba678a6b7ef1404e2974a93e21ac92aba016e965f566a8e0ea3354", // #14
 ];
 // Checked both these addLayer(2, ...) and the input data is the same
 // ADDLAYERTXHASHES = [
@@ -48,57 +48,30 @@ async function doIt() {
     const block = await provider.getBlock(txReceipt.blockNumber);
     let decodedData = mff.interface.parseTransaction({ data: tx.data, value: tx.value });
     data.push({ tx, txReceipt, decodedData });
-    // console.log("decodedData: " + JSON.stringify(decodedData, null, 2));
-    // console.log(txHash + "\t" + decodedData.args[0] + "\t" + JSON.stringify(decodedData.args[1], null, 2));
-
-    // for (const tuple of decodedData.args[1]) {
-    //   console.log(txHash + "\t" + decodedData.args[0] + "\t" + JSON.stringify(tuple, null, 2));
-    // }
-
-    // console.log("decodedData.functionFragment.name: " + decodedData.functionFragment.name);
-    // for (let i in decodedData.functionFragment.inputs) {
-    //   const c = decodedData.functionFragment.inputs[i];
-    //   console.log("  " + i + " " + c.name + " " + c.type + " " + decodedData.args[i]);
-    // }
   }
 
-  function hex2a(hexx) {
-      var hex = hexx.toString();//force conversion
-      var str = '';
-      for (var i = 0; i < hex.length; i += 2)
-          str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
-      return str;
-  }
-
-  // const test = "0x89504e470d0a1a0a0000000d494844520000003a0000003a0103000000db75d86b000000017352474201d9c92c7f000000097048597300000b1300000b1301009a9c1800000006504c5445000000000000a567b9cf0000000274524e53001a8bf134420000003b49444154789c6360a00bf0a448b707946642083192630e1361255880038cc1e2822187c5190e984230200271450343034c8403423560514c6f000073d202fe6a6cbab50000000049454e44ae426082";
-  // const testOutput = ethers.utils.toUtf8Bytes(test);
-  // console.log(test + " " + testOutput);
-
-  console.log("txHash\tlayer\ttuple#\tname\tmimeType\tdata");
+  // console.log("txHash\tlayer\ttuple#\tname\tmimeType\tdata");
   for (const item of data) {
     let tupleIndex = 0;
     for (const tuple of item.decodedData.args[1]) {
       // console.log(item.tx.hash + "\t" + item.decodedData.args[0] + "\t" + tupleIndex + "\t" + tuple[0] + "\t" + tuple[1] + "\t" + tuple[2]);
-
       const name = tuple[0].toLowerCase().replace(/['\/ @]/g, '');
       let buffer = Buffer.from(tuple[2].substring(2), "hex");
       let filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0') + "-" + name + '.' + tuple[1].replace(/^.*\//, '');
-      // console.log(name + " => " + filename); //  + ' ' + buffer);
       console.log('\n#### Layer ' + item.decodedData.args[0] + ' Trait ' + tupleIndex.toString().padStart(3, '0') + ' ' + tuple[0]);
       console.log('<kbd><img src="scripts/' + filename + '" width="150px" height="150px" style="image-rendering: pixelated !important;" /></kbd>'); //  + ' ' + buffer);
       fs.writeFile(filename, buffer, (err) => {
         if (err) return console.error(err);
-      //   // console.log("File successfully written !");
+        // console.log("File successfully written !");
       });
 
       filename = "svgs/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0')+ "-" + name + ".svg"; // + tuple[1].replace(/^.*\//, '');
       const base64 = buffer.toString('base64');
       const content = '<svg width="1200" height="1200" viewBox="0 0 1200 1200" version="1.2" xmlns="http://www.w3.org/2000/svg" style="background-color:transparent;background-image:url(data:' + tuple[1] + ';base64,' +
         base64 + ');background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;"></svg>';
-        // console.log(filename + " " + JSON.stringify(data1));
       fs.writeFile(filename, content, (err) => {
         if (err) return console.error(err);
-      //   // console.log("File successfully written !");
+        // console.log("File successfully written !");
       });
 
       tupleIndex++;
