@@ -11,3 +11,5 @@ In scripts
 ```
 node 01_scrapeAddLayerTxs.js > addLayerTxs.txt
 ```
+
+Images extracted from the transaction data can be found in [scripts/images](scripts/images).
