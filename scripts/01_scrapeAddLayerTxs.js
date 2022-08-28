@@ -83,7 +83,8 @@ async function doIt() {
       const name = tuple[0].toLowerCase().replace(/['\/ @]/g, '');
       let buffer = Buffer.from(tuple[2].substring(2), "hex");
       let filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0')+ "-" + name + '.' + tuple[1].replace(/^.*\//, '');
-      console.log(name + " => " + filename); //  + ' ' + buffer);
+      // console.log(name + " => " + filename); //  + ' ' + buffer);
+      console.log('<kbd><img src="scripts/' + filename + '" width="50px" height="50px"/></kbd>'); //  + ' ' + buffer);
       fs.writeFile(filename, buffer, (err) => {
         if (err) return console.error(err);
       //   // console.log("File successfully written !");
