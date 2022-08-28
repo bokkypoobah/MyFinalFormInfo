@@ -21,7 +21,7 @@ PNG and GIF images extracted from the transaction data can be found in [scripts/
 
 ### Example TokenId 862
 
-<kbd><img src="images/myfinalform_862_9554834177c04b289bea56e4a19e795a.svg" width="600px" height="600px" /></kbd>
+<kbd><img src="images/myfinalform_862_9554834177c04b289bea56e4a19e795a.svg" width="300px" height="300px" /></kbd>
 
 #### Layer 0 1 of 1s Trait 011 Generative
 <kbd><img src="scripts/svgs/layer0-trait011-generative.svg" width="300px" height="300px" /></kbd>
@@ -32,6 +32,41 @@ PNG and GIF images extracted from the transaction data can be found in [scripts/
 #### Layer 2 Accessory Trait 015 Stoney Chocolate Munchies
 <kbd><img src="scripts/svgs/layer2-trait015-stoneychocolatemunchies.svg" width="300px" height="300px" /></kbd>
 
+#### Layer 3 SP Eyes Trait 071 Laser Eyez
+<kbd><img src="scripts/svgs/layer3-trait071-lasereyez.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 4 SP Mouth Trait 034 Peach Smile
+<kbd><img src="scripts/svgs/layer4-trait034-peachsmile.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 5 SP Head Trait 157 Black Hat
+<kbd><img src="scripts/svgs/layer5-trait157-blackhat.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 6 LL Eyes Trait 073 Dope Shades
+<kbd><img src="scripts/svgs/layer6-trait073-dopeshades.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 7 LL Mouth Trait 025 Normal Beard Black
+<kbd><img src="scripts/svgs/layer7-trait025-normalbeardblack.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 8 LL Head Trait 101 Cowbutt
+<kbd><img src="scripts/svgs/layer8-trait101-cowbutt.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 9 Toadz Mouth Trait 047 Short Smoke
+<kbd><img src="scripts/svgs/layer9-trait047-shortsmoke.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 10 Toadz Eyes Trait 049 Sun Burst
+<kbd><img src="scripts/svgs/layer10-trait049-sunburst.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 11 Dick Trait 000 Spidey
+<kbd><img src="scripts/svgs/layer11-trait000-spidey.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 12 Butt Trait 003 None
+<kbd><img src="scripts/svgs/layer12-trait003-none.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 13 Skin Trait 025 Larva Sun Cream
+<kbd><img src="scripts/svgs/layer13-trait025-larvasuncream.svg" width="300px" height="300px" /></kbd>
+
+#### Layer 14 Background Trait 026 Bruise
+<kbd><img src="scripts/svgs/layer14-trait026-bruise.svg" width="300px" height="300px" /></kbd>
 
 
 ```
