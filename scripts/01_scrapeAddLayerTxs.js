@@ -32,6 +32,8 @@ let ADDLAYERTXHASHES = [
 //   // "0xb7065b6d4f9abc8b37bb04775df2bcd9d7a5801572a9046dd52dcc67240c0eca",
 // ];
 
+const LAYERNAMES = ["1 of 1s", "Hands", "Accessory", "SP Eyes", "SP Mouth", "SP Head", "LL Eyes", "LL Mouth", "LL Head", "Toadz Mouth", "Toadz Eyes", "Dick", "Butt", "Skin", "Background"];
+
 let STARTBLOCKNUMBER=13045935;
 let ENDBLOCKNUMBER=13047090;
 
@@ -58,7 +60,7 @@ async function doIt() {
       const name = tuple[0].toLowerCase().replace(/['\/ @]/g, '');
       let buffer = Buffer.from(tuple[2].substring(2), "hex");
       let filename = "images/layer" + item.decodedData.args[0] + "-trait" + tupleIndex.toString().padStart(3, '0') + "-" + name + '.' + tuple[1].replace(/^.*\//, '');
-      console.log('\n#### Layer ' + item.decodedData.args[0] + ' Trait ' + tupleIndex.toString().padStart(3, '0') + ' ' + tuple[0]);
+      console.log('\n#### Layer ' + item.decodedData.args[0] + ' ' + LAYERNAMES[item.decodedData.args[0]] + ' Trait ' + tupleIndex.toString().padStart(3, '0') + ' ' + tuple[0]);
       fs.writeFile(filename, buffer, (err) => {
         if (err) return console.error(err);
         // console.log("File successfully written !");
