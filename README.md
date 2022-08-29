@@ -2,26 +2,11 @@
 
 [My Final Form](https://myfinalform.io/), not associated, is a fully on-chain NFT collection deployed on the Ethereum blockchain at [0xe8e2b12e02cefc12603e99cd414d9d9ec82068cf](https://etherscan.io/address/0xe8e2b12e02cefc12603e99cd414d9d9ec82068cf#code). See also: [OpenSea](https://opensea.io/collection/my-final-form) and [Twitter](https://twitter.com/MFF_ETH).
 
-The MFF smart contract was deployed [Aug-18-2022 03:19:08 PM +UTC](https://etherscan.io/tx/0xed0555bf0420aab38d62065f1cafdbce032528189a7483b2b8a95201f92734b3), and 15 layers of traits data was loaded in transactions, by layers: [0](https://etherscan.io/tx/), [1](https://etherscan.io/tx/),
+The MFF smart contract was deployed [Aug-18-2022 03:19:08 PM +UTC](https://etherscan.io/tx/0xed0555bf0420aab38d62065f1cafdbce032528189a7483b2b8a95201f92734b3), and 15 layers of traits data was loaded in transactions, by layers: [0](https://etherscan.io/tx/0x3f1e9e37464f14fe72a23b580ab5ddf86f7cd9ea572f2c2cfc80fd458773bebc), [1](https://etherscan.io/tx/0xc3bac8f516fd34ff25867373fb2965e8be73ac956923564af56d12c887d8bc87), [2](https://etherscan.io/tx/0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3), [3](https://etherscan.io/tx/0x5dc732ec369616f1adb6941415d87f518425149e8ffbd2cd2dcaab664fa1470b), [4](https://etherscan.io/tx/0xcf912acd2c22f581ab8ce69487e38ab1c4a3a87556161ae70e81a293f0017cb3), [5](https://etherscan.io/tx/0x12a74348a39bee838c16b2c78015ebe7a89fa64fa088f569d39c29fb273ff1eb), [6](https://etherscan.io/tx/0x6188df9a320faebd87d63f496cfc43edee8bdeb0fc31b2a31840603ab75fcbeb), [7](https://etherscan.io/tx/0xaaea83cf9a26aeabcc12b62647e850cbf2fbcb5552ae666d3ca141085c590dbe), [8](https://etherscan.io/tx/0xe1a0c8ff89791990815b33976dcc53b3f5e1c0f27f37a2b80699f626bb3282a9), [9](https://etherscan.io/tx/0x86616e9064709e5545fd58880eb89a0998ebde330a5f399879b8b1defb47159c), [10](https://etherscan.io/tx/0xacfc7d53c25ce6c918933e209ac1ada306d01d40082c4710dc2ee29e332d4e21), [11](https://etherscan.io/tx/0x7de9ef2d90b85196f2083021b932c26b6a715ffdf6c04d254a1c093ea848ccef), [12](https://etherscan.io/tx/0xe47f8bb237f15adb5c68aafa3ac41059ed48d2f4038f7043c550be825d8f9286), [13](https://etherscan.io/tx/0x300bf52b4d38565bb099b593913fc063dbc6029ece80b6d18cfbadb8e3296e65) and [14](https://etherscan.io/tx/0x1ee722e68cba678a6b7ef1404e2974a93e21ac92aba016e965f566a8e0ea3354).
 
+<br />
 
-(https://etherscan.io/tx/0x3f1e9e37464f14fe72a23b580ab5ddf86f7cd9ea572f2c2cfc80fd458773bebc", // #0
-(https://etherscan.io/tx/0xc3bac8f516fd34ff25867373fb2965e8be73ac956923564af56d12c887d8bc87", // #1
-(https://etherscan.io/tx/0x112adaf82a55ddd6c5e436b22637c59e4e81f250802a739b24a9e4146b84c2c3", // #2
-(https://etherscan.io/tx/0x5dc732ec369616f1adb6941415d87f518425149e8ffbd2cd2dcaab664fa1470b", // #3
-(https://etherscan.io/tx/0xcf912acd2c22f581ab8ce69487e38ab1c4a3a87556161ae70e81a293f0017cb3", // #4
-(https://etherscan.io/tx/0x12a74348a39bee838c16b2c78015ebe7a89fa64fa088f569d39c29fb273ff1eb", // #5
-(https://etherscan.io/tx/0x6188df9a320faebd87d63f496cfc43edee8bdeb0fc31b2a31840603ab75fcbeb", // #6
-(https://etherscan.io/tx/0xaaea83cf9a26aeabcc12b62647e850cbf2fbcb5552ae666d3ca141085c590dbe", // #7
-(https://etherscan.io/tx/0xe1a0c8ff89791990815b33976dcc53b3f5e1c0f27f37a2b80699f626bb3282a9", // #8
-(https://etherscan.io/tx/0x86616e9064709e5545fd58880eb89a0998ebde330a5f399879b8b1defb47159c", // #9
-(https://etherscan.io/tx/0xacfc7d53c25ce6c918933e209ac1ada306d01d40082c4710dc2ee29e332d4e21", // #10
-(https://etherscan.io/tx/0x7de9ef2d90b85196f2083021b932c26b6a715ffdf6c04d254a1c093ea848ccef", // #11
-(https://etherscan.io/tx/0xe47f8bb237f15adb5c68aafa3ac41059ed48d2f4038f7043c550be825d8f9286", // #12
-(https://etherscan.io/tx/0x300bf52b4d38565bb099b593913fc063dbc6029ece80b6d18cfbadb8e3296e65", // #13
-(https://etherscan.io/tx/0x1ee722e68cba678a6b7ef1404e2974a93e21ac92aba016e965f566a8e0ea3354", // #14
-
-
+<hr />
 
 Contracts in [contracts](contracts).
 
