@@ -2857,4 +2857,4 @@ hashToMetadata('011014015071034157073026101047049000003025026') = [{"trait_type"
 
 Enjoy!
 
-(c) BokkyPooBah / Bok Consulting Pty Ltd - Tue 30 2022. The MIT Licence.
+(c) BokkyPooBah / Bok Consulting Pty Ltd - Aug 30 2022. The MIT Licence.
