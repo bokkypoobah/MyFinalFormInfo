@@ -2850,3 +2850,11 @@ hashToMetadata('011014015071034157073026101047049000003025026') = [{"trait_type"
 
 #### Layer 14 Background Trait 043 Phunk Lads
 <kbd><img src="scripts/svgs/layer14-trait043-phunklads.svg" width="300px" height="300px" /></kbd>
+
+<br />
+
+<br />
+
+Enjoy!
+
+(c) BokkyPooBah / Bok Consulting Pty Ltd - Tue 30 2022. The MIT Licence.
